@@ -1,25 +1,52 @@
 :root {
 	
-	--farge1:#283D3B; /*footer */
-	--farge2:#197278; /*header */
-	--farge3:#EDDDD4; /*main */
-	--shadow:black;
+	--dark-blue-green:#283D3B; /*footer */
+	--cyan-green:#197278; /*header */
+	--sand:#EDDDD4; /*main */
 }
 
 
 body {
-	background: var(--farge3);
-	margin: 30px 200px;
+	background: var(--sand);
+
 	line-height: 1.4;
 }
+.item1 { grid-area: header; }
+.item2 { grid-area: menu; }
+.item3 { grid-area: main; }
+.item4 { grid-area: right; }
+.item5 { grid-area: footer; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'menu main main main right right'
+    'menu footer footer footer footer footer';
+  grid-gap: 4vw;
+  background-color:var(--sand);
+  padding: 10px;
+  
+}
+
+.grid-container > div {
+  background-color:var(--sand);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+
+
+
 
 
 .li1 {
 	float: left; 
 }
 
-
-ul { padding-inline-start:0px; }
+ul { padding-inline-start:0px; 
+margin: 0%;}
 
 
 .li1 a {
@@ -37,6 +64,8 @@ list-style: none;
 .main-nav ul {
 	
 	list-style: none;
+	position: fixed;
+	top: 1vh;
 	
 	
 }
@@ -44,7 +73,9 @@ list-style: none;
 .main-nav2 ul {
 	
 	list-style: none;
-	
+	position: fixed;
+	top: 0vh;
+
 	
 }
 
@@ -52,44 +83,46 @@ list-style: none;
 .main-nav2{list-style: none;}
 
 #burgerknapp {
-	color: white;
-	text-align: center;
-  background: var(--farge2);
+color: white;
+text-align: center;
+  background: var(--cyan-green);
   text-decoration: none;
   display: block;
   list-style: none;
   padding: 5px;
   margin: 2px;
-  width: 30px;
-  height: 30px;
+  width: 4vh;
+  height: 4vh;
+  position: fixed;
+  
 }
 .knapp {
-	background: var(--farge2);
+	background: var(--cyan-green);
 	display: block;
 	text-decoration: none;
 	margin: 2px;
 	text-align: center;
-	color: var(--farge1);
+	color: var(--dark-blue-green);
 	text-transform: uppercase;
 	font-size: 1rem;
 	box-shadow: var(--shadow);
 }
 
 .knapp1 {
-	background: var(--farge2);
+	background: var(--cyan-green);
 	display: block;
 	text-decoration: none;
 	margin: 1px;
 	text-align: center;
-	color: var(--farge1);
+	color: var(--dark-blue-green);
 	text-transform: uppercase;
 	font-size: 1rem;
 	box-shadow: var(--shadow);
 }
 
 .main-nav a:hover {
-	background: var(--farge2);
-	color: var(--farge3);
+	background: var(--cyan-green);
+	color: var(--sand);
 
 }
 
@@ -130,4 +163,27 @@ list-style: none;
 
 .main-nav2 #myLinks {
   display: none;
+}
+
+.item3 {
+	border: 1px solid var(--dark-blue-green);
+	
+}
+
+
+
+
+.buttonform { border: 1px solid var(--dark-blue-green); 
+text-decoration: none;
+color: black;
+background-color:white;
+border-radius: 5px;
+
+}
+
+
+
+.form
+{
+	border-radius: 10px;
 }
