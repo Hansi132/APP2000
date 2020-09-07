@@ -1,90 +1,88 @@
 :root {
-	
-	--dark-blue-green:#283D3B; /*footer */
-	--cyan-green:#197278; /*header */
-	--sand:#EDDDD4; /*main */
+  --dark-blue-green: #283d3b; /*footer */
+  --cyan-green: #197278; /*header */
+  --sand: #edddd4; /*main */
 }
-
 
 body {
-	background: var(--sand);
+  background: var(--sand);
 
-	line-height: 1.4;
+  line-height: 1.4;
 }
-.item1 { grid-area: header; }
-.item2 { grid-area: menu; }
-.item3 { grid-area: main; }
-.item4 { grid-area: right; }
-.item5 { grid-area: footer; }
+.item1 {
+  grid-area: header;
+}
+.item2 {
+  grid-area: menu;
+}
+.item3 {
+  grid-area: main;
+}
+.item4 {
+  grid-area: right;
+}
+.item5 {
+  grid-area: footer;
+}
 
 .grid-container {
   display: grid;
   grid-template-areas:
-    'header header header header header header'
-    'menu main main main right right'
-    'menu footer footer footer footer footer';
+    "header header header header header header"
+    "menu main main main right right"
+    "menu footer footer footer footer footer";
   grid-gap: 4vw;
-  background-color:var(--sand);
+  background-color: var(--sand);
   padding: 10px;
-  
 }
 
 .grid-container > div {
-  background-color:var(--sand);
+  background-color: var(--sand);
   text-align: center;
   padding: 20px 0;
   font-size: 30px;
 }
 
-
-
-
-
-
 .li1 {
-	float: left; 
+  float: left;
 }
 
-ul { padding-inline-start:0px; 
-margin: 0%;}
-
+ul {
+  padding-inline-start: 0px;
+  margin: 0%;
+}
 
 .li1 a {
-	display: block;
-	padding: 12px 12px;
+  display: block;
+  padding: 12px 12px;
 }
 
 li a {
-	width: 120px;
-	margin: 0px;
-	padding: 12px 12px;
-list-style: none;
+  width: 120px;
+  margin: 0px;
+  padding: 12px 12px;
+  list-style: none;
 }
 
 .main-nav ul {
-	
-	list-style: none;
-	position: fixed;
-	top: 1vh;
-	
-	
+  list-style: none;
+  position: fixed;
+  top: 1vh;
 }
 
 .main-nav2 ul {
-	
-	list-style: none;
-	position: fixed;
-	top: 0vh;
-
-	
+  list-style: none;
+  position: fixed;
+  top: 0vh;
 }
 
-
-.main-nav2{list-style: none;}
+.main-nav2 {
+  list-style: none;
+}
 
 #burgerknapp {
-color: white;
-text-align: center;
+  color: white;
+  text-align: center;
   background: var(--cyan-green);
   text-decoration: none;
   display: block;
@@ -94,96 +92,140 @@ text-align: center;
   width: 4vh;
   height: 4vh;
   position: fixed;
-  
 }
 .knapp {
-	background: var(--cyan-green);
-	display: block;
-	text-decoration: none;
-	margin: 2px;
-	text-align: center;
-	color: var(--dark-blue-green);
-	text-transform: uppercase;
-	font-size: 1rem;
-	box-shadow: var(--shadow);
+  background: var(--cyan-green);
+  display: block;
+  text-decoration: none;
+  margin: 2px;
+  text-align: center;
+  color: var(--dark-blue-green);
+  text-transform: uppercase;
+  font-size: 1rem;
+  box-shadow: var(--shadow);
 }
 
 .knapp1 {
-	background: var(--cyan-green);
-	display: block;
-	text-decoration: none;
-	margin: 1px;
-	text-align: center;
-	color: var(--dark-blue-green);
-	text-transform: uppercase;
-	font-size: 1rem;
-	box-shadow: var(--shadow);
+  background: var(--cyan-green);
+  display: block;
+  text-decoration: none;
+  margin: 1px;
+  text-align: center;
+  color: var(--dark-blue-green);
+  text-transform: uppercase;
+  font-size: 1rem;
+  box-shadow: var(--shadow);
 }
 
 .main-nav a:hover {
-	background: var(--cyan-green);
-	color: var(--sand);
-
+  background: var(--cyan-green);
+  color: var(--sand);
 }
 
-.right { float: right; }
-
+.right {
+  float: right;
+}
 
 @media only screen and (max-width: 1000px) {
-  body 
-  {  margin: 0px 0px;}
+  body {
+    margin: 0px 0px;
+  }
 
-  #burgerknapp { display: none; }
-  .main-nav2 { display: none; }
- 
+  #burgerknapp {
+    display: none;
+  }
+  .main-nav2 {
+    display: none;
+  }
 }
 
 @media only screen and (min-width: 580px) {
   body {
-   /* margin: 0px 0px;*/
-}
-  #burgerknapp { display: none; }
-  .main-nav2 { display: none; }
-
-  
-  
-
+    /* margin: 0px 0px;*/
+  }
+  #burgerknapp {
+    display: none;
+  }
+  .main-nav2 {
+    display: none;
+  }
+  .item3 {
+    min-width: 100%;
+    max-width: 100%;
+    border: 10px solid red;
+  }
 }
 
 @media only screen and (max-width: 580px) {
-  body { margin: 0px 0px;}
-   .main-nav{ display: none; }
-   .main-nav2 {display: block;}
-   #burgerknapp { display: block; }
+  body {
+    margin: 0px 0px;
+  }
+  .main-nav {
+    display: none;
+  }
+  .main-nav2 {
+    display: block;
+  }
+  #burgerknapp {
+    display: block;
+  }
+  #innloggingSkjema {
+	width: 100%;
+	height: 32vh;;
+	border: 3px solid var(--dark-blue-green);
+	border-radius: 3vh;
+  }
+  #registrerBruker {
+	width: 100%;
+	height: 50vh;
+	border: 3px solid var(--dark-blue-green);
+	border-radius: 3vh;
+	margin-left: 3vw;
+  }
 
+  .item3 h2 {
+	  margin-left: 5vw;
+  }
 }
-
-
-
 
 .main-nav2 #myLinks {
   display: none;
 }
 
-.item3 {
-	border: 1px solid var(--dark-blue-green);
+@media only screen and (min-width: 1180) {
+  .item3 {
+    border: 3px solid var(--dark-blue-green);
+    border-radius: 4vh;
+    box-shadow: 0.2vh 0.2vh grey;
+    min-width: 20vw;
+    min-height: 20vh;
+    max-height: 100vh;
+    max-width: 20vh;
+  }
+}
+
+
+.abutton {
+	-webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+	font-size: 1.2rem;
+	
+    text-decoration: none;
+	color: 
 	
 }
 
-
-
-
-.buttonform { border: 1px solid var(--dark-blue-green); 
-text-decoration: none;
-color: black;
-background-color:white;
-border-radius: 5px;
-
+.buttonform {
+  border: 1px solid var(--dark-blue-green);
+  text-decoration: none;
+  color: black;
+  background-color: white;
+  border-radius: 5px;
+  max height: 2vh;
+  width: 5vh;
 }
 
-
-
-.form
-{
-	border-radius: 10px;
+.form {
+  border-radius: 8vh;
 }
