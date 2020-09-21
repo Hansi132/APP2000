@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Gruppe</title>
-	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+	<link rel="stylesheet" type="text/css" href="mobile.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<meta name="viewport" content="device-width, initial-scale=1.0">
 	<script language="Javascript" src="hamburger.js"></script>
@@ -17,93 +17,125 @@
   <div class="grid-container">
 <!----------------------------------------------------------------------------------------------------->
   <div class="item2">
-    menu
+    right
 
   </div>
   <!----------------------------------------------------------------------------------------------------->
-  <div class="item3">
-    main
-
-  </div>
+  
   <!----------------------------------------------------------------------------------------------------->
   <div class="item4">
     right
   </div>
   <!----------------------------------------------------------------------------------------------------->
   <div class="item5">
-    footer
+    footer 
   </div>
   <!----------------------------------------------------------------------------------------------------->
+
+  <div class="item0">
+
+		<div class="header">
+			<box class="topBox">Hei</box>
+			<a id="burgerknapp" href="javascript:void(0);" onclick="myFunction()">
+				<i class="fa fa-bars"></i>
+			</a>
+		</div>
+
+		<div>
+			<!-- Dette er for desktop  -->
+			<nav class="main-nav">
+
+
+				<ul>
+
+					<li class="li1">
+						<a class="knapp" href="index.html">Hjem</a>
+					</li>
+
+					<li class="li1">
+						<a class="knapp" href="avstemning.html">Avstemning </a>
+					</li>
+
+					<li class="li1">
+						<a class="knapp" href="nominering.html">Nominering </a>
+					</li>
+
+					<li class="right">
+						<a class="knapp" href="logginn.html">Logg inn </a>
+					</li>
+
+					<li class="right">
+						<a class="knapp" href="loggut.html"> Logg ut
+							<div id="brukernavn"></div>
+						</a>
+
+				</ul>
+			</nav>
+
+		</div>
+
+		<!-- Dette er for knapp for mobil -->
+		<div>
+			<nav class="main-nav2">
+				<ul>
+					<div id="myLinks" style="display: none;">
+
+						<li>
+							<a class="knapp1" href="index.html">Hjem</a>
+						</li>
+
+						<li>
+							<a class="knapp1" href="avstemning.html">Avstemning </a>
+						</li>
+
+						<li>
+							<a class="knapp1" href="nominering.html">Nominering </a>
+						</li>
+
+						<li>
+							<a class="knapp1" href="logginn.html">Logg inn </a>
+						</li>
+
+						<li>
+							<a class="knapp1" href="loggut.html"> Logg ut
+								<div id="brukernavn"></div>
+							</a>
+						</li>
+				</ul>
+		</div>
+
+		</nav>
+
+	</div>
+
+	<div class="item3">
+		<h2> Nominerte </h2 >
+		<div class="bildeboks">
+		<img src="https://m3iam.files.wordpress.com/2014/05/facebook-default-no-profile-pic.jpg" class="bilder" >
+		<p class="pbildeboks">Ola Nordmann </p>
+		</div>
+
+		<div class="bildeboks">
+		<img src="https://m3iam.files.wordpress.com/2014/05/facebook-default-no-profile-pic.jpg" class="bilder" >
+		<p class="pbildeboks">Ola Nordmann </p>
+		</div>
+
+		<div class="bildeboks">
+		<img src="https://m3iam.files.wordpress.com/2014/05/facebook-default-no-profile-pic.jpg" class="bilder" >
+		<p class="pbildeboks">Ola Nordmann </p>
+		</div>
+
+		<div class="bildeboks">
+		<img src="https://m3iam.files.wordpress.com/2014/05/facebook-default-no-profile-pic.jpg" class="bilder" >
+		<p class="pbildeboks">Ola Nordmann </p>
+		</div>
+	</div>
+	
+	  
+
  </div>
-  <div>
-   <nav class="main-nav">
-   	
-    
-      <ul>
 
-          <li class="li1">
-            <a class="knapp" href="index.html">Hjem</a>
-          </li>
 
-          <li class="li1">
-            <a class="knapp" href="avstemning.html">Avstemning </a>
-          </li>
-
-          <li class="li1">
-            <a class="knapp" href="nominering.html">Nominering </a>
-          </li>
-
-          <li class="right">
-            <a class="knapp" href="logginn.html">Logg inn </a>
-          </li>
-
-          <li class="right">
-            <a class="knapp" href="loggut.html"> Logg ut <div id="brukernavn"><?php print("($innloggetBruker)")?></div></a>
-          </li>
-      </ul>
-    
-          
- </nav>
-   
 </div>
-
-
-<div>
-   <nav class="main-nav2">
-    <ul>
-      <li> <a id="burgerknapp" href="javascript:void(0);"  onclick="myFunction()">
-       <i class="fa fa-bars"></i>
-     </a>
-   </li>
-    <div id="myLinks">
-      
-          <li>
-            <a class="knapp1" href="index.html">Hjem</a>
-          </li>
-
-          <li>
-            <a class="knapp1" href="avstemning.html">Avstemning </a>
-          </li>
-
-          <li>
-            <a class="knapp1" href="nominering.html">Nominering </a>
-          </li>
-
-          <li >
-            <a class="knapp1" href="logginn.html">Logg inn </a>
-          </li>
-
-          <li >
-            <a class="knapp1" href="loggut.html"> Logg ut <div id="brukernavn"><?php print("($innloggetBruker)")?></div></a>
-          </li>
-      </ul>
-    </div>
-          
- </nav>
-   
-</div>
-
-
-
 </body>
 </html>

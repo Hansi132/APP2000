@@ -7,3 +7,8 @@ function myFunction() {
     x.style.display = "block";
   }
 }
+
+function switchPage() {
+  var menu =  document.getElementById("myLinks");
+  menu.style.display = "none";
+};
