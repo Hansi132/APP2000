@@ -11,133 +11,117 @@
 <body>
 
 
-	
-  <div class="grid-container">
-    <div class="item2"></div>
+<div class="grid-container">
+
+	<div class="item0">
+
+		<div class="header">
+			<box class="topBox">Hei</box>
+			<a id="burgerknapp" href="javascript:void(0);" onclick="myFunction()">
+				<i class="fa fa-bars"></i>
+			</a>
+		</div>
+
+		<div>
+			<!-- Dette er for desktop  -->
+			<nav class="main-nav">
 
 
+				<ul>
+
+					<li class="li1">
+						<a class="knapp" href="index.html">Hjem</a>
+					</li>
+
+					<li class="li1">
+						<a class="knapp" href="avstemning.html">Avstemning </a>
+					</li>
+
+					<li class="li1">
+						<a class="knapp" href="nominering.html">Nominering </a>
+					</li>
+
+					<li class="right">
+						<a class="knapp" href="logginn.html">Logg inn </a>
+					</li>
+
+					<li class="right">
+						<a class="knapp" href="loggut.html"> Logg ut
+							<div id="brukernavn"></div>
+						</a>
+
+				</ul>
+			</nav>
+
+		</div>
+
+		<!-- Dette er for knapp for mobil -->
+		<div>
+			<nav class="main-nav2">
+				<ul>
+					<div id="myLinks">
+
+						<li>
+							<a class="knapp1" href="index.html">Hjem</a>
+						</li>
+
+						<li>
+							<a class="knapp1" href="avstemning.html">Avstemning </a>
+						</li>
+
+						<li>
+							<a class="knapp1" href="nominering.html">Nominering </a>
+						</li>
+
+						<li>
+							<a class="knapp1" href="logginn.html">Logg inn </a>
+						</li>
+
+						<li>
+							<a class="knapp1" href="loggut.html"> Logg ut
+								<div id="brukernavn"></div>
+							</a>
+						</li>
+				</ul>
+		</div>
+
+		</nav>
+
+	</div>
 
 
-    <!----------------------------------------------------------------------------------------------->
-    <div class="item3">
+	<!----------------------------------------------------------------------------------------------->
+	<div class="item3 item3login">
 
 
-
-<h2> Logg inn </h2>
-<form action="" id="innloggingSkjema" name="innloggingSkjema" method="post">
-
-
-Epost <br/> <input name="Epost" type="text" id="epost" class="form"/> <br/>
-
-Passord <br/> <input name="passord" type="password" id="passord" class="form" > <br />
-
-<input type="submit" name="glemtPassord" value="Glemt passord"/>
-
-<input type="submit" name="logginnKnapp" value="Logg inn">
-<br>
-<a href="nybruker.html" class="buttonform">Registrer bruker</a>
-
-</form>
-       </div>  
-<!------------------------------------------------------------------------------------------------------>
+		<h2> Logg inn </h2>
+		<form action="" id="innloggingSkjema" name="innloggingSkjema" method="post">
 
 
-<div class="item4">
- 
+			Epost <br/> <input name="Epost" type="text" id="epost" class="form"/> <br/>
 
+			Passord <br/> <input name="passord" type="password" id="passord" class="form"> <br/>
 
+			<input type="submit" name="glemtPassord" value="Glemt passord" class="formknapp"/>
+			<br>
+			<input type="submit" name="logginnKnapp" value="Logg inn" class="formknapp">
+			<br>
+			<a href="nybruker.html" class="registrerBruker formknapp">Registrer bruker </a>
+
+		</form>
+	</div>
+	<!------------------------------------------------------------------------------------------------------>
 
 
 </div>
 
 
+<div class="item5"></div>
 
 
+<div class="item1">
 
-
-
-
-
-
-
-    <div class="item5"></div>
-
-
-    <div class="item1">
-      <div>
-        <nav class="main-nav">
-          
-         
-           <ul>
-     
-               <li class="li1">
-                 <a class="knapp" href="index.html">Hjem</a>
-               </li>
-     
-               <li class="li1">
-                 <a class="knapp" href="avstemning.html">Avstemning </a>
-               </li>
-     
-               <li class="li1">
-                 <a class="knapp" href="nominering.html">Nominering </a>
-               </li>
-     
-               <li class="right">
-                 <a class="knapp" href="logginn.html">Logg inn </a>
-               </li>
-     
-               <li class="right">
-                 <a class="knapp" href="loggut.html"> Logg ut <div id="brukernavn"><?php print("($innloggetBruker)")?></div></a>
-               </li>
-           </ul>
-         
-               
-      </nav>
-        
-     </div>
-     
-     
-     <div>
-        <nav class="main-nav2">
-         <ul>
-           <li> <a id="burgerknapp" href="javascript:void(0);"  onclick="myFunction()">
-            <i class="fa fa-bars"></i>
-          </a>
-        </li>
-         <div id="myLinks">
-           
-               <li>
-                 <a class="knapp1" href="index.html">Hjem</a>
-               </li>
-     
-               <li>
-                 <a class="knapp1" href="avstemning.html">Avstemning </a>
-               </li>
-     
-               <li>
-                 <a class="knapp1" href="nominering.html">Nominering </a>
-               </li>
-     
-               <li >
-                 <a class="knapp1" href="logginn.html">Logg inn </a>
-               </li>
-     
-               <li >
-                 <a class="knapp1" href="loggut.html"> Logg ut <div id="brukernavn"><?php print("($innloggetBruker)")?></div></a>
-               </li>
-           </ul>
-         </div>
-               
-      </nav>
-        
-     </div>
-    </div>
-    
-  </div>
-
-
-  
-
+</div>
 
 
 </body>
