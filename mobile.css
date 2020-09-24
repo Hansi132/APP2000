@@ -5,7 +5,8 @@
   --footer: #41b3a3; /*footer */
   --header: #FF873A; /*header */
   --hovedside:#EBEDEF; /*main */
-  --forms: #c38d9e; /*forms and stuff */
+  --forms: #333333; /*forms and stuff */
+
 }
 
 body {
@@ -125,9 +126,9 @@ input:focus {
 }
 
 .formknapp {
-  background-color: var(--header); /* Green */
+  background-color: var(--forms); /* Green */
   border: none;
-  color: white;
+  color: var(--header);
   padding: 2vw 0;
   text-align: center;
   text-decoration: none;
