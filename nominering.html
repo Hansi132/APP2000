@@ -34,20 +34,16 @@
 
   <div class="item0">
 
-		<div class="header">
-			<box class="topBox">Hei</box>
-			<a id="burgerknapp" href="javascript:void(0);" onclick="myFunction()">
-				<i class="fa fa-bars"></i>
-			</a>
-		</div>
+	<div class="header">
+		<box class="topBox">Hei</box>
+		<a id="burgerknapp" class="burgerknapp" href="javascript:void(0);" onclick="myFunction()">
+			<i class="fa fa-bars"></i>
+		</a>
 
-		<div>
+		<div class="desktop-nav">
 			<!-- Dette er for desktop  -->
 			<nav class="main-nav">
-
-
 				<ul>
-
 					<li class="li1">
 						<a class="knapp" href="index.html">Hjem</a>
 					</li>
@@ -60,53 +56,55 @@
 						<a class="knapp" href="nominering.html">Nominering </a>
 					</li>
 
-					<li class="right">
+					<li class="li1">
 						<a class="knapp" href="logginn.html">Logg inn </a>
 					</li>
 
-					<li class="right">
+					<li class="li1">
 						<a class="knapp" href="loggut.html"> Logg ut
 							<div id="brukernavn"></div>
 						</a>
-
+					</li>
 				</ul>
 			</nav>
 
 		</div>
-
-		<!-- Dette er for knapp for mobil -->
-		<div>
-			<nav class="main-nav2">
-				<ul>
-					<div id="myLinks" style="display: none;">
-
-						<li>
-							<a class="knapp1" href="index.html">Hjem</a>
-						</li>
-
-						<li>
-							<a class="knapp1" href="avstemning.html">Avstemning </a>
-						</li>
-
-						<li>
-							<a class="knapp1" href="nominering.html">Nominering </a>
-						</li>
-
-						<li>
-							<a class="knapp1" href="logginn.html">Logg inn </a>
-						</li>
-
-						<li>
-							<a class="knapp1" href="loggut.html"> Logg ut
-								<div id="brukernavn"></div>
-							</a>
-						</li>
-				</ul>
-		</div>
-
-		</nav>
-
+		
 	</div>
+
+	<!-- Dette er for knapp for mobil -->
+	<div class="mobile-nav">
+		<nav class="main-nav2">
+			<div id="myLinks" style="display: none;">
+				<ul>
+
+
+					<li>
+						<a class="knapp1" href="index.html">Hjem</a>
+					</li>
+
+					<li>
+						<a class="knapp1" href="avstemning.html">Avstemning </a>
+					</li>
+
+					<li>
+						<a class="knapp1" href="nominering.html">Nominering </a>
+					</li>
+
+					<li>
+						<a class="knapp1" href="logginn.html">Logg inn </a>
+					</li>
+
+					<li>
+						<a class="knapp1" href="loggut.html"> Logg ut
+							<div id="brukernavn"></div>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+</div>
 
 	<div class="item3">
 		<h2> Nominerte </h2 >

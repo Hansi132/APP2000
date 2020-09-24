@@ -1,0 +1,19 @@
+@media screen and (min-width: 992px) {
+    .burgerknapp {
+        display: none !important;
+    }
+
+    .main-nav {
+        display: block !important;
+    }
+
+    .desktop-nav {
+        float: right;
+    }
+
+    ul {
+        margin: 0;
+        padding-top: 0px !important;
+    }
+
+} 

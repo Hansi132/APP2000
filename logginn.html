@@ -17,49 +17,48 @@
 
 		<div class="header">
 			<box class="topBox">Hei</box>
-			<a id="burgerknapp" href="javascript:void(0);" onclick="myFunction()">
+			<a id="burgerknapp" class="burgerknapp" href="javascript:void(0);" onclick="myFunction()">
 				<i class="fa fa-bars"></i>
 			</a>
-		</div>
 
-		<div>
-			<!-- Dette er for desktop  -->
-			<nav class="main-nav">
-
-
-				<ul>
-
-					<li class="li1">
-						<a class="knapp" href="index.html">Hjem</a>
-					</li>
-
-					<li class="li1">
-						<a class="knapp" href="avstemning.html">Avstemning </a>
-					</li>
-
-					<li class="li1">
-						<a class="knapp" href="nominering.html">Nominering </a>
-					</li>
-
-					<li class="right">
-						<a class="knapp" href="logginn.html">Logg inn </a>
-					</li>
-
-					<li class="right">
-						<a class="knapp" href="loggut.html"> Logg ut
-							<div id="brukernavn"></div>
-						</a>
-
-				</ul>
-			</nav>
-
+			<div class="desktop-nav">
+				<!-- Dette er for desktop  -->
+				<nav class="main-nav">
+					<ul>
+						<li class="li1">
+							<a class="knapp" href="index.html">Hjem</a>
+						</li>
+	
+						<li class="li1">
+							<a class="knapp" href="avstemning.html">Avstemning </a>
+						</li>
+	
+						<li class="li1">
+							<a class="knapp" href="nominering.html">Nominering </a>
+						</li>
+	
+						<li class="li1">
+							<a class="knapp" href="logginn.html">Logg inn </a>
+						</li>
+	
+						<li class="li1">
+							<a class="knapp" href="loggut.html"> Logg ut
+								<div id="brukernavn"></div>
+							</a>
+						</li>
+					</ul>
+				</nav>
+	
+			</div>
+			
 		</div>
 
 		<!-- Dette er for knapp for mobil -->
-		<div>
+		<div class="mobile-nav">
 			<nav class="main-nav2">
-				<ul>
-					<div id="myLinks" style="display: none;">
+				<div id="myLinks" style="display: none;">
+					<ul>
+
 
 						<li>
 							<a class="knapp1" href="index.html">Hjem</a>
@@ -82,11 +81,10 @@
 								<div id="brukernavn"></div>
 							</a>
 						</li>
-				</ul>
+					</ul>
+				</div>
+			</nav>
 		</div>
-
-		</nav>
-
 	</div>
 
 
@@ -102,11 +100,11 @@
 
 			Passord <br/> <input name="passord" type="password" id="passord" class="form1"> <br/>
 
-			<input type="submit" name="glemtPassord" value="Glemt passord" class="formknapp"/>
+			<input type="submit" name="glemtPassord" value="Glemt passord?" class="formknapp"/>
 			<br>
 			<input type="submit" name="logginnKnapp" value="Logg inn" class="formknapp">
 			<br>
-			<a href="nybruker.html" class="registrerBruker formknapp">Registrer bruker </a>
+			<a href="nybruker.html" class="registrerBruker formknapp">Registrer ny bruker </a>
 
 		</form>
 	</div>

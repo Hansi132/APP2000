@@ -41,8 +41,13 @@
           <br />
 
           <a href="logginn.html" class="abutton">Logg inn</a>
-          <input type="submit" name="submit" id="submit" value="Registrer" class="abutton" />
-          
+          <input
+            type="submit"
+            name="submit"
+            id="submit"
+            value="Registrer"
+            class="abutton"
+          />
         </form>
       </div>
 
@@ -51,43 +56,48 @@
       <div class="item0">
         <div class="header">
           <box class="topBox">Hei</box>
-          <a id="burgerknapp" href="javascript:void(0);" onclick="myFunction()">
+          <a
+            id="burgerknapp"
+            class="burgerknapp"
+            href="javascript:void(0);"
+            onclick="myFunction()"
+          >
             <i class="fa fa-bars"></i>
           </a>
-        </div>
 
-        <div>
-          <!-- Dette er for desktop  -->
-          <nav class="main-nav">
-            <ul>
-              <li class="li1">
-                <a class="knapp" href="index.html">Hjem</a>
-              </li>
+          <div class="desktop-nav">
+            <!-- Dette er for desktop  -->
+            <nav class="main-nav">
+              <ul>
+                <li class="li1">
+                  <a class="knapp" href="index.html">Hjem</a>
+                </li>
 
-              <li class="li1">
-                <a class="knapp" href="avstemning.html">Avstemning </a>
-              </li>
+                <li class="li1">
+                  <a class="knapp" href="avstemning.html">Avstemning </a>
+                </li>
 
-              <li class="li1">
-                <a class="knapp" href="nominering.html">Nominering </a>
-              </li>
+                <li class="li1">
+                  <a class="knapp" href="nominering.html">Nominering </a>
+                </li>
 
-              <li class="right">
-                <a class="knapp" href="logginn.html">Logg inn </a>
-              </li>
+                <li class="li1">
+                  <a class="knapp" href="logginn.html">Logg inn </a>
+                </li>
 
-              <li class="right">
-                <a class="knapp" href="loggut.html">
-                  Logg ut
-                  <div id="brukernavn"></div>
-                </a>
-              </li>
-            </ul>
-          </nav>
+                <li class="li1">
+                  <a class="knapp" href="loggut.html">
+                    Logg ut
+                    <div id="brukernavn"></div>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
         </div>
 
         <!-- Dette er for knapp for mobil -->
-        <div>
+        <div class="mobile-nav">
           <nav class="main-nav2">
             <div id="myLinks" style="display: none">
               <ul>
