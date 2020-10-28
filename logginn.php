@@ -28,19 +28,19 @@
 						<li class="li1">
 							<a class="knapp" href="index.html">Hjem</a>
 						</li>
-	
+
 						<li class="li1">
 							<a class="knapp" href="avstemning.html">Avstemning </a>
 						</li>
-	
+
 						<li class="li1">
 							<a class="knapp" href="nominering.html">Nominering </a>
 						</li>
-	
+
 						<li class="li1">
-							<a class="knapp" href="logginn.html">Logg inn </a>
+							<a class="knapp" href="logginn.php">Logg inn </a>
 						</li>
-	
+
 						<li class="li1">
 							<a class="knapp" href="loggut.html"> Logg ut
 								<div id="brukernavn"></div>
@@ -48,9 +48,9 @@
 						</li>
 					</ul>
 				</nav>
-	
+
 			</div>
-			
+
 		</div>
 
 		<!-- Dette er for knapp for mobil -->
@@ -73,7 +73,7 @@
 						</li>
 
 						<li>
-							<a class="knapp1" href="logginn.html">Logg inn </a>
+							<a class="knapp1" href="logginn.php">Logg inn </a>
 						</li>
 
 						<li>
@@ -93,10 +93,10 @@
 
 
 		<h3> Logg inn </h3>
-		<form action="" id="innloggingSkjema" name="innloggingSkjema" method="post" class="loginForm">
+		<form action="logginn.php" id="innloggingSkjema" name="innloggingSkjema" method="POST" class="loginForm">
 
 
-			Epost <br/> <input name="Epost" type="text" id="epost" class="form1"/> <br/>
+			Epost <br/> <input name="epost" type="text" id="epost" class="form1" autofocus="autofocus"/> <br/>
 
 			Passord <br/> <input name="passord" type="password" id="passord" class="form1"> <br/>
 
@@ -109,18 +109,17 @@
 		</form>
 	</div>
 	<!------------------------------------------------------------------------------------------------------>
-
-
 </div>
-
-
 <div class="item5"></div>
-
-
 <div class="item1">
-
 </div>
-
-
 </body>
 </html>
+
+<?php
+if (isset($_POST["logginnKnapp"]))
+	include_once ('sjekkUserPass.php');
+
+	sjekkUserPass($_POST["epost"], sha1("IT2_2021" . $_POST["passord"]));
+
+?>
