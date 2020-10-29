@@ -1,3 +1,8 @@
+<?php
+session_start();
+@$innloggetBruker=$_SESSION["brukernavn"];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +16,7 @@
 <body>
 
 
-<div class="grid-container" >
+<div class="grid-container">
 	<!-------------------------------------------------------------------------------------------------------->
 	<div class="item2">
 	</div>
@@ -20,12 +25,14 @@
 		<section>
 			<h3>Velkommen til side for valg</h3>
 			<br>
-			<p class="text">Dette er en side der man kan stemme og nominere kandidater for valget. Venligst logg inn for å bruke siden.</p>
-			<img height="200px" src="https://www.usn.no/getfile.php/13520469-1525427372/usn.no/om_USN/Logo%20og%20grafiske%20elementer/USN_logotype.png" >
+			<p class="text">Dette er en side der man kan stemme og nominere kandidater for valget. Venligst logg inn for
+				å bruke siden.</p>
+			<img height="200px"
+				 src="https://www.usn.no/getfile.php/13520469-1525427372/usn.no/om_USN/Logo%20og%20grafiske%20elementer/USN_logotype.png">
 		</section>
 	</div>
 
-	
+
 	<!------------------------------------------------------------------------------------------------------------>
 	<div class="item4">
 
@@ -48,31 +55,35 @@
 				<nav class="main-nav">
 					<ul>
 						<li class="li1">
-							<a class="knapp" href="index.html">Hjem</a>
+							<a class="knapp" href="index.php">Hjem</a>
 						</li>
-	
+
 						<li class="li1">
-							<a class="knapp" href="avstemning.html">Avstemning </a>
+							<a class="knapp" href="avstemning.php">Avstemning </a>
 						</li>
-	
+
 						<li class="li1">
-							<a class="knapp" href="nominering.html">Nominering </a>
+							<a class="knapp" href="nominering.php">Nominering </a>
 						</li>
-	
-						<li class="li1">
-							<a class="knapp" href="logginn.php">Logg inn </a>
-						</li>
-	
-						<li class="li1">
-							<a class="knapp" href="loggut.html"> Logg ut
-								<div id="brukernavn"></div>
+
+						<?php
+						if(empty(@$innloggetBruker)) {
+							print ("<li class=\"li1\">
+                  <a class=\"knapp\" href=\"logginn.php\">Logg inn </a>
+                </li>");
+						} else {
+							print ("<li class=\"li1\">
+							<a class=\"knapp\" href=\"loggut.php\"> Logg ut
+								<div id=\"brukernavn\"></div>
 							</a>
-						</li>
+						</li>");
+						}
+						?>
 					</ul>
 				</nav>
-	
+
 			</div>
-			
+
 		</div>
 
 		<!-- Dette er for knapp for mobil -->
@@ -83,26 +94,30 @@
 
 
 						<li>
-							<a class="knapp1" href="index.html">Hjem</a>
+							<a class="knapp1" href="index.php">Hjem</a>
 						</li>
 
 						<li>
-							<a class="knapp1" href="avstemning.html">Avstemning </a>
+							<a class="knapp1" href="avstemning.php">Avstemning </a>
 						</li>
 
 						<li>
-							<a class="knapp1" href="nominering.html">Nominering </a>
+							<a class="knapp1" href="nominering.php">Nominering </a>
 						</li>
 
-						<li>
-							<a class="knapp1" href="logginn.php">Logg inn </a>
-						</li>
-
-						<li>
-							<a class="knapp1" href="loggut.html"> Logg ut
-								<div id="brukernavn"></div>
+						<?php
+						if(empty($_SESSION["brukernavn"])) {
+							print ("<li class=\"li1\">
+                  <a class=\"knapp\" href=\"logginn.php\">Logg inn </a>
+                </li>");
+						} else {
+							print ("<li class=\"li1\">
+							<a class=\"knapp\" href=\"loggut.php\"> Logg ut
+								<div id=\"brukernavn\"></div>
 							</a>
-						</li>
+						</li>");
+						}
+						?>
 					</ul>
 				</div>
 			</nav>

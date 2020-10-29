@@ -1,3 +1,7 @@
+<?php
+include ("isLogged.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -15,17 +19,17 @@
     <div class="grid-container">
       <!----------------------------------------------------------------------------------------------------->
       <div class="item2">
-        
+
       </div>
       <!----------------------------------------------------------------------------------------------------->
 
       <!----------------------------------------------------------------------------------------------------->
       <div class="item4">
-        
+
       </div>
       <!----------------------------------------------------------------------------------------------------->
       <div class="item5">
-        
+
       </div>
       <!----------------------------------------------------------------------------------------------------->
 
@@ -46,27 +50,30 @@
             <nav class="main-nav">
               <ul>
                 <li class="li1">
-                  <a class="knapp" href="index.html">Hjem</a>
+                  <a class="knapp" href="index.php">Hjem</a>
                 </li>
 
                 <li class="li1">
-                  <a class="knapp" href="avstemning.html">Avstemning </a>
+                  <a class="knapp" href="avstemning.php">Avstemning </a>
                 </li>
 
                 <li class="li1">
-                  <a class="knapp" href="nominering.html">Nominering </a>
+                  <a class="knapp" href="nominering.php">Nominering </a>
                 </li>
 
-                <li class="li1">
-                  <a class="knapp" href="logginn.php">Logg inn </a>
-                </li>
-
-                <li class="li1">
-                  <a class="knapp" href="loggut.html">
-                    Logg ut
-                    <div id="brukernavn"></div>
-                  </a>
-                </li>
+				  <?php
+				  	if(empty($_SESSION["brukernavn"])) {
+				  		print ("<li class=\"li1\">
+                  <a class=\"knapp\" href=\"logginn.php\">Logg inn </a>
+                </li>");
+					} else {
+						print ("<li class=\"li1\">
+							<a class=\"knapp\" href=\"loggut.php\"> Logg ut
+								<div id=\"brukernavn\"></div>
+							</a>
+						</li>");
+					}
+				  ?>
               </ul>
             </nav>
           </div>
@@ -78,27 +85,30 @@
             <div id="myLinks" style="display: none">
               <ul>
                 <li>
-                  <a class="knapp1" href="index.html">Hjem</a>
+                  <a class="knapp1" href="index.php">Hjem</a>
                 </li>
 
                 <li>
-                  <a class="knapp1" href="avstemning.html">Avstemning </a>
+                  <a class="knapp1" href="avstemning.php">Avstemning </a>
                 </li>
 
                 <li>
-                  <a class="knapp1" href="nominering.html">Nominering </a>
+                  <a class="knapp1" href="nominering.php">Nominering </a>
                 </li>
 
-                <li>
-                  <a class="knapp1" href="logginn.php">Logg inn </a>
-                </li>
-
-                <li>
-                  <a class="knapp1" href="loggut.html">
-                    Logg ut
-                    <div id="brukernavn"></div>
-                  </a>
-                </li>
+				  <?php
+				  if(empty($_SESSION["brukernavn"])) {
+					  print ("<li class=\"li1\">
+                  <a class=\"knapp\" href=\"logginn.php\">Logg inn </a>
+                </li>");
+				  } else {
+					  print ("<li class=\"li1\">
+							<a class=\"knapp\" href=\"loggut.php\"> Logg ut
+								<div id=\"brukernavn\"></div>
+							</a>
+						</li>");
+				  }
+				  ?>
               </ul>
             </div>
           </nav>
@@ -118,7 +128,7 @@
         </form>
       </div>
 
-      
+
         <h3>Nominerte</h3>
         <div class="bildeboks">
           <img src="https://m3iam.files.wordpress.com/2014/05/facebook-default-no-profile-pic.jpg" class="bilder" />

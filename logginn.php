@@ -26,25 +26,15 @@
 				<nav class="main-nav">
 					<ul>
 						<li class="li1">
-							<a class="knapp" href="index.html">Hjem</a>
+							<a class="knapp" href="index.php">Hjem</a>
 						</li>
 
 						<li class="li1">
-							<a class="knapp" href="avstemning.html">Avstemning </a>
+							<a class="knapp" href="avstemning.php">Avstemning </a>
 						</li>
 
 						<li class="li1">
-							<a class="knapp" href="nominering.html">Nominering </a>
-						</li>
-
-						<li class="li1">
-							<a class="knapp" href="logginn.php">Logg inn </a>
-						</li>
-
-						<li class="li1">
-							<a class="knapp" href="loggut.html"> Logg ut
-								<div id="brukernavn"></div>
-							</a>
+							<a class="knapp" href="nominering.php">Nominering </a>
 						</li>
 					</ul>
 				</nav>
@@ -61,25 +51,15 @@
 
 
 						<li>
-							<a class="knapp1" href="index.html">Hjem</a>
+							<a class="knapp1" href="index.php">Hjem</a>
 						</li>
 
 						<li>
-							<a class="knapp1" href="avstemning.html">Avstemning </a>
+							<a class="knapp1" href="avstemning.php">Avstemning </a>
 						</li>
 
 						<li>
-							<a class="knapp1" href="nominering.html">Nominering </a>
-						</li>
-
-						<li>
-							<a class="knapp1" href="logginn.php">Logg inn </a>
-						</li>
-
-						<li>
-							<a class="knapp1" href="loggut.html"> Logg ut
-								<div id="brukernavn"></div>
-							</a>
+							<a class="knapp1" href="nominering.php">Nominering </a>
 						</li>
 					</ul>
 				</div>

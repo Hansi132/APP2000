@@ -1,6 +1,5 @@
 <?php
 
-
 class mysqlPDO extends PDO
 {
 	public function __construct()
