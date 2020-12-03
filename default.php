@@ -1,32 +1,6 @@
 <?php
 session_start();
-@$inloggetBruker = $_SESSION["brukernavn"];
-
-define('__ROOT__', dirname(dirname(dirname(__FILE__))));
-
-require_once (__ROOT__.'/mysqlPDO.php');
-try {
-
-	if (empty($inloggetBruker)) {
-		print("<meta http-equiv='refresh' content='0;URL=index.php'/>");
-	}
-
-	$dhn = new mysqlPDO();
-	$sql = "SELECT type FROM brukertype JOIN bruker b on brukertype.idbrukertype = b.brukertype WHERE b.`e-post` =:epost;";
-	$stmt = $dhn->prepare($sql);
-	$stmt->bindParam(':epost', $inloggetBruker);
-	$stmt->execute();
-	$result = $stmt->fetch(PDO::FETCH_ASSOC);
-
-
-	if($result["type"] != 'administrator') {
-		print "<meta http-equiv='refresh' content='0;URL=/users/". $result["type"] ."/default.php'/>";
-	}
-
-} catch (PDOException $e) {
-	echo ($e->getMessage());
-}
-
+@$innloggetBruker=$_SESSION["brukernavn"];
 ?>
 
 <!DOCTYPE html>
@@ -49,7 +23,7 @@ try {
 	<!------------------------------------------------------------------------------------------------------------>
 	<div class="item3">
 		<section>
-			<h3>Velkommen til admin backend</h3>
+			<h3>Velkommen til side for valg</h3>
 			<br>
 			<p class="text">Dette er en side der man kan stemme og nominere kandidater for valget. Venligst logg inn for
 				å bruke siden.</p>
@@ -77,29 +51,33 @@ try {
 			</a>
 
 			<div class="desktop-nav">
+				<?php if(!empty(@$innloggetBruker)) {
+					//TODO Make this pretty.
+					print ("Innlogget som: " . $innloggetBruker);
+				}?>
 				<!-- Dette er for desktop  -->
 				<nav class="main-nav">
 					<ul>
 						<li class="li1">
-							<a class="knapp" href="index.php">Hjem</a>
+							<a class="knapp" href="https://itfag.usn.no/grupper/Vapp20G11/default.php">Hjem</a>
 						</li>
 
 						<li class="li1">
-							<a class="knapp" href="avstemning.php">Avstemning </a>
+							<a class="knapp" href="https://itfag.usn.no/grupper/Vapp20G11/avstemning.php">Avstemning </a>
 						</li>
 
 						<li class="li1">
-							<a class="knapp" href="nominering.php">Nominering </a>
+							<a class="knapp" href="https://itfag.usn.no/grupper/Vapp20G11/nominering.php">Nominering </a>
 						</li>
 
 						<?php
 						if(empty(@$innloggetBruker)) {
 							print ("<li class=\"li1\">
-                  <a class=\"knapp\" href=\"logginn.php\">Logg inn </a>
+                  <a class=\"knapp\" href=\"https://itfag.usn.no/grupper/Vapp20G11/logginn.php\">Logg inn </a>
                 </li>");
 						} else {
 							print ("<li class=\"li1\">
-							<a class=\"knapp\" href=\"loggut.php\"> Logg ut
+							<a class=\"knapp\" href=\"https://itfag.usn.no/grupper/Vapp20G11/loggut.php\"> Logg ut
 								<div id=\"brukernavn\"></div>
 							</a>
 						</li>");
@@ -120,25 +98,25 @@ try {
 
 
 						<li>
-							<a class="knapp1" href="index.php">Hjem</a>
+							<a class="knapp1" href="https://itfag.usn.no/grupper/Vapp20G11/default.php">Hjem</a>
 						</li>
 
 						<li>
-							<a class="knapp1" href="avstemning.php">Avstemning </a>
+							<a class="knapp1" href="https://itfag.usn.no/grupper/Vapp20G11/avstemning.php">Avstemning </a>
 						</li>
 
 						<li>
-							<a class="knapp1" href="nominering.php">Nominering </a>
+							<a class="knapp1" href="https://itfag.usn.no/grupper/Vapp20G11/nominering.php">Nominering </a>
 						</li>
 
 						<?php
 						if(empty($_SESSION["brukernavn"])) {
 							print ("<li class=\"li1\">
-                  <a class=\"knapp\" href=\"logginn.php\">Logg inn </a>
+                  <a class=\"knapp1\" href=\"https://itfag.usn.no/grupper/Vapp20G11/logginn.php\">Logg inn </a>
                 </li>");
 						} else {
 							print ("<li class=\"li1\">
-							<a class=\"knapp\" href=\"loggut.php\"> Logg ut
+							<a class=\"knapp1\" href=\"https://itfag.usn.no/grupper/Vapp20G11/loggut.php\"> Logg ut
 								<div id=\"brukernavn\"></div>
 							</a>
 						</li>");

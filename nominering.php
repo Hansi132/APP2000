@@ -50,7 +50,7 @@ include ("isLogged.php");
             <nav class="main-nav">
               <ul>
                 <li class="li1">
-                  <a class="knapp" href="index.php">Hjem</a>
+                  <a class="knapp" href="default.php">Hjem</a>
                 </li>
 
                 <li class="li1">
@@ -85,7 +85,7 @@ include ("isLogged.php");
             <div id="myLinks" style="display: none">
               <ul>
                 <li>
-                  <a class="knapp1" href="index.php">Hjem</a>
+                  <a class="knapp1" href="default.php">Hjem</a>
                 </li>
 
                 <li>

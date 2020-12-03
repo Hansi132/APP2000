@@ -5,5 +5,5 @@ session_start();
 
 if (!$innloggetBruker)
 {
-	print("<meta http-equiv='refresh' content='0;url=index.php'>");
+	print("<meta http-equiv='refresh' content='0;url=default.php'>");
 }

@@ -12,7 +12,7 @@ function sjekkUserPass($brukernavn, $passord) {
 		if (strtoupper($result['e-post']) == strtoupper($brukernavn) && $result["passord"] == $passord) {
 			session_start();
 			$_SESSION["brukernavn"] = $brukernavn;
-			print("<meta http-equiv='refresh' content='0;url=index.php'>");
+			print("<meta http-equiv='refresh' content='0;url=users/backendCheck.php'>");
 		} else {
 			print "Wrong username password";
 		}
