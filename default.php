@@ -25,7 +25,7 @@ session_start();
 		<section>
 			<h3>Velkommen til side for valg</h3>
 			<br>
-			<p class="text">Dette er en side der man kan stemme og nominere kandidater for valget. Venligst logg inn for
+			<p class="text"> TEST TEST TEST Dette er en side der man kan stemme og nominere kandidater for valget. Venligst logg inn for
 				å bruke siden.</p>
 			<img height="200px"
 				 src="https://www.usn.no/getfile.php/13520469-1525427372/usn.no/om_USN/Logo%20og%20grafiske%20elementer/USN_logotype.png">
