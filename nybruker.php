@@ -42,8 +42,8 @@
 
           <input
             type="submit"
-            name="submit"
-            id="submit"
+            name="registrerBruker"
+            id="registrerBruker"
             value="Registrer"
             class="formknapp"
           />
@@ -65,7 +65,7 @@ if (!$epost || !$fornavn || !$etternavn || !$passord)
 
    {
              
-   print ("Alle felt m&aring; fylles ut");
+      print("Alle felt må fylles ut!");
              
    }
              
@@ -97,6 +97,7 @@ if (!$epost || !$fornavn || !$etternavn || !$passord)
    mysqli_query($db,$sqlSetning) or die ("ikke mulig &aring; registrere data i databasen");
              
    print ("F&oslash;lgende bruker er nå registrert $fornavn $etternavn");
+   print("<a class='loggInnKnapp' href='logginn.php'> Gå til innlogging </a>");
           
    }
  }
@@ -136,9 +137,7 @@ if (!$epost || !$fornavn || !$etternavn || !$passord)
                   <a class="knapp" href="nominering.php">Nominering </a>
                 </li>
 
-                <li class="li1">
-                  <a class="knapp" href="logginn.php">Logg inn </a>
-                </li>
+                
 
                 <li class="li1">
                   <a class="knapp" href="loggut.html">
@@ -168,10 +167,7 @@ if (!$epost || !$fornavn || !$etternavn || !$passord)
                   <a class="knapp1" href="nominering.php">Nominering </a>
                 </li>
 
-                <li>
-                  <a class="knapp1" href="logginn.php">Logg inn </a>
-                </li>
-
+                
                 <li>
                   <a class="knapp1" href="loggut.html">
                     Logg ut

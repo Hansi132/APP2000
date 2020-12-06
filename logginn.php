@@ -84,7 +84,7 @@
 			<br>
 			<input type="submit" name="logginnKnapp" value="Logg inn" class="formknapp">
 			<br>
-			<a href="nybruker.html" class="registrerBruker formknapp">Registrer ny bruker </a>
+			<a href="nybruker.php" class="registrerBruker formknapp">Registrer ny bruker </a>
 
 		</form>
 	</div>
