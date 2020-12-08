@@ -42,13 +42,69 @@
 
           <input
             type="submit"
-            name="submit"
-            id="submit"
+            name="registrerBruker"
+            id="registrerBruker"
             value="Registrer"
             class="formknapp"
           />
-          <a href="logginn.php" class="formknapp">Logg inn</a>
+          
         </form>
+
+<?php
+  if (isset($_POST ["registrerBruker"]))
+ {
+
+   
+   $fornavn=$_POST ["fornavn"];
+   $etternavn=$_POST ["etternavn"];
+   $epost=$_POST ["epost"];
+   $passord=$_POST ["passord"];
+
+             
+if (!$epost || !$fornavn || !$etternavn || !$passord)
+
+   {
+             
+      print("Alle felt må fylles ut!");
+             
+   }
+             
+
+   else
+             
+   {
+   include("db-tilkobling.php"); /* tilkobling til database-serveren utført og valg av database foretatt */
+   $sqlSetning="SELECT * FROM student WHERE brukernavn='$brukernavn';";  /* where er hvem som skal bli endret. feks customer med 1 med brukernavn 1*/
+   $sqlResultat=mysqli_query($db,$sqlSetning) or die ("ikke mulig &aring; hente data fra databasen");
+   $antallRader=mysqli_num_rows($sqlResultat);
+             
+
+   if ($antallRader!=0) /* faget er registrert fra før */
+             
+   {
+             
+   print ("Bruker er registrert fra f&oslashr");
+             
+   }
+             
+
+   else
+             
+   {
+             
+   $sqlSetning="INSERT INTO student (fornavn,etternavn,epost,passord) VALUES('$fornavn','$etternavn','$epost','$passord');";
+             
+   mysqli_query($db,$sqlSetning) or die ("ikke mulig &aring; registrere data i databasen");
+             
+   print ("F&oslash;lgende bruker er nå registrert $fornavn $etternavn");
+   print("<a class='loggInnKnapp' href='logginn.php'> Gå til innlogging </a>");
+          
+   }
+ }
+              
+}          
+    ?>   
+
       </div>
 
       <div class="item5"></div>
@@ -81,9 +137,7 @@
                   <a class="knapp" href="nominering.php">Nominering </a>
                 </li>
 
-                <li class="li1">
-                  <a class="knapp" href="logginn.php">Logg inn </a>
-                </li>
+                
 
                 <li class="li1">
                   <a class="knapp" href="loggut.html">
@@ -113,10 +167,7 @@
                   <a class="knapp1" href="nominering.php">Nominering </a>
                 </li>
 
-                <li>
-                  <a class="knapp1" href="logginn.php">Logg inn </a>
-                </li>
-
+                
                 <li>
                   <a class="knapp1" href="loggut.html">
                     Logg ut
@@ -131,3 +182,4 @@
     </div>
   </body>
 </html>
+
