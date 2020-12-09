@@ -2,4 +2,11 @@
 
 
 define('__ROOT__', dirname(dirname(dirname(__FILE__))));
-require_once (__ROOT__.'/default.php');
+
+print ("Bytt passord");
+
+print ("Last opp bilde");
+
+print ("Slett bruker");
+
+print ("Hent ut info om meg");

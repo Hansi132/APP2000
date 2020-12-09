@@ -30,8 +30,16 @@
 			<input name="fornavn" type="text" id="fornavn" class="form1"/> <br/>
 
 			<label for="etternavn" class="">Etternavn</label> <br/>
-			<input name="etternavn" type="text" id="etternavn" class="form1"/>
-			<br/>
+			<input name="etternavn" type="text" id="etternavn" class="form1"/><br/>
+
+			<label for="kjønn" class="">Kjønn</label><br>
+			<select name="kjønn" id="kjønn" class="form1">
+				<option value="M">Mann</option>
+				<option value="K">Kvinne</option>
+			</select><br>
+
+			<label for="bursdag">Fødselsdato</label><br>
+			<input type="date" name="bursdag" id="bursdag" class="form1" value="1998-01-01"><br>
 
 			<label for="epost" class="">Epost</label> <br/>
 			<input name="epost" type="text" id="epost" class="form1"/> <br/>
@@ -59,19 +67,17 @@
 			$epost = $_POST ["epost"];
 			$passord = $_POST ["passord"];
 
-
-
 			if (!$epost || !$fornavn || !$etternavn || !$passord) {
 				print("Alle felt må fylles ut!");
 			} else {
 				require_once("mysqlPDO.php");
-				$sql = "SELECT `epost` FROM bruker WHERE 'e-post' = ?;";
+				$sql = "SELECT `epost` FROM bruker WHERE 'epost' = ?;";
 				$dhn = new mysqlPDO();
 				$stmt = $dhn->prepare($sql);
 				$stmt->execute([$epost]);
 				$result = $stmt->fetch();
 
-				if (!empty($result['e-post'])) /* faget er registrert fra før */ {
+				if (!empty($result['epost'])) {
 
 					print ("Bruker er registrert fra f&oslashr");
 
