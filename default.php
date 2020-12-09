@@ -23,11 +23,13 @@ session_start();
 	<!------------------------------------------------------------------------------------------------------------>
 	<div class="item3">
 		<section>
-			<h3>Velkommen til side for valg</h3>
+			<h3>Velkommen til siden for studentvalget 2021</h3>
 			<br>
-			<p class="text">Dette er en side der man kan stemme og nominere kandidater for valget.
-				Venligst logg inn for
-				å bruke siden.</p>
+			<p class="text"> <br>
+				 
+			Dette er siden der dere skal stemme og nominere kandidater for skolevalget. <br>
+			Venligst logg inn for å bruke siden.
+		</p>
 			<img height="200px"
 				 src="https://www.usn.no/getfile.php/13520469-1525427372/usn.no/om_USN/Logo%20og%20grafiske%20elementer/USN_logotype.png">
 		</section>
