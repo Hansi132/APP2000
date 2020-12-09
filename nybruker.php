@@ -66,9 +66,12 @@
 			$etternavn = $_POST ["etternavn"];
 			$epost = $_POST ["epost"];
 			$passord = $_POST ["passord"];
+			$kjonn = $_POST ["kjønn"];
+			$bursdag = $_POST ["bursdag"];
 
-			if (!$epost || !$fornavn || !$etternavn || !$passord) {
-				print("Alle felt må fylles ut!");
+
+			if (!$epost || !$fornavn || !$etternavn || !$passord || (strpos($epost, "usn") == false)) {
+				print("Alle felt må fylles ut, og det må være en USN epostadresse");
 			} else {
 				require_once("mysqlPDO.php");
 				$sql = "SELECT `epost` FROM bruker WHERE 'epost' = ?;";
@@ -82,9 +85,9 @@
 					print ("Bruker er registrert fra f&oslashr");
 
 				} else {
-					$sql = "INSERT INTO bruker (`epost`, passord, enavn, fnavn, brukertype) VALUES(:epost, :passord, :enavn, :fnavn, 1);";
+					$sql = "INSERT INTO bruker (`epost`, passord, enavn, fnavn, brukertype, fdato, mann) VALUES(:epost, :passord, :enavn, :fnavn, 1, :fdato, :mann);";
 					$stmt = $dhn->prepare($sql);
-					$stmt->execute([':epost' => $epost, ':passord' => sha1("IT2_2021" . $_POST["passord"]), ':enavn' => $etternavn, ':fnavn' => $fornavn]);
+					$stmt->execute([':epost' => $epost, ':passord' => sha1("IT2_2021" . $_POST["passord"]), ':enavn' => $etternavn, ':fnavn' => $fornavn, ':fdato' => $bursdag, ':mann' => $kjonn]);
 					$stmt = null;
 				}
 			}
@@ -123,14 +126,6 @@
 						<li class="li1">
 							<a class="knapp" href="nominering.php">Nominering </a>
 						</li>
-
-
-						<li class="li1">
-							<a class="knapp" href="loggut.html">
-								Logg ut
-								<div id="brukernavn"></div>
-							</a>
-						</li>
 					</ul>
 				</nav>
 			</div>
@@ -151,14 +146,6 @@
 
 						<li>
 							<a class="knapp1" href="nominering.php">Nominering </a>
-						</li>
-
-
-						<li>
-							<a class="knapp1" href="loggut.html">
-								Logg ut
-								<div id="brukernavn"></div>
-							</a>
 						</li>
 					</ul>
 				</div>

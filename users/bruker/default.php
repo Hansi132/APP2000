@@ -9,4 +9,4 @@ print ("Last opp bilde");
 
 print ("Slett bruker");
 
-print ("Hent ut info om meg");
+print ("Hent ut info om meg!");
