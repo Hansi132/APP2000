@@ -281,10 +281,9 @@ ul {
 }
 
 li a {
-  width: 120px;
-  margin: 0;
   padding: 12px 12px;
   list-style: none;
+  margin: 0 10px 0 0;
 }
 
 .main-nav ul {

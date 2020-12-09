@@ -1,6 +1,6 @@
 <?php
 session_start();
-@$innloggetBruker=$_SESSION["brukernavn"];
+@$innloggetBruker = $_SESSION["brukernavn"];
 ?>
 
 <!DOCTYPE html>
@@ -25,7 +25,8 @@ session_start();
 		<section>
 			<h3>Velkommen til side for valg</h3>
 			<br>
-			<p class="text"> TEST TEST TEST Dette er en side der man kan stemme og nominere kandidater for valget. Venligst logg inn for
+			<p class="text">Dette er en side der man kan stemme og nominere kandidater for valget.
+				Venligst logg inn for
 				å bruke siden.</p>
 			<img height="200px"
 				 src="https://www.usn.no/getfile.php/13520469-1525427372/usn.no/om_USN/Logo%20og%20grafiske%20elementer/USN_logotype.png">
@@ -51,10 +52,6 @@ session_start();
 			</a>
 
 			<div class="desktop-nav">
-				<?php if(!empty(@$innloggetBruker)) {
-					//TODO Make this pretty.
-					print ("Innlogget som: " . $innloggetBruker);
-				}?>
 				<!-- Dette er for desktop  -->
 				<nav class="main-nav">
 					<ul>
@@ -63,15 +60,23 @@ session_start();
 						</li>
 
 						<li class="li1">
-							<a class="knapp" href="https://itfag.usn.no/grupper/Vapp20G11/avstemning.php">Avstemning </a>
+							<a class="knapp"
+							   href="https://itfag.usn.no/grupper/Vapp20G11/avstemning.php">Avstemning </a>
 						</li>
 
 						<li class="li1">
-							<a class="knapp" href="https://itfag.usn.no/grupper/Vapp20G11/nominering.php">Nominering </a>
+							<a class="knapp"
+							   href="https://itfag.usn.no/grupper/Vapp20G11/nominering.php">Nominering </a>
 						</li>
 
+						<?php if (!empty(@$innloggetBruker)) {
+							$brukertype = $_SESSION["brukertype"];
+							$fnavn = $_SESSION["fnavn"];
+							print ("<li class='li1'> <a class='knapp' href='https://itfag.usn.no/grupper/Vapp20G11/users/$brukertype/default.php'>$fnavn</a></li>");
+						} ?>
+
 						<?php
-						if(empty(@$innloggetBruker)) {
+						if (empty(@$innloggetBruker)) {
 							print ("<li class=\"li1\">
                   <a class=\"knapp\" href=\"https://itfag.usn.no/grupper/Vapp20G11/logginn.php\">Logg inn </a>
                 </li>");
@@ -102,15 +107,17 @@ session_start();
 						</li>
 
 						<li>
-							<a class="knapp1" href="https://itfag.usn.no/grupper/Vapp20G11/avstemning.php">Avstemning </a>
+							<a class="knapp1"
+							   href="https://itfag.usn.no/grupper/Vapp20G11/avstemning.php">Avstemning </a>
 						</li>
 
 						<li>
-							<a class="knapp1" href="https://itfag.usn.no/grupper/Vapp20G11/nominering.php">Nominering </a>
+							<a class="knapp1"
+							   href="https://itfag.usn.no/grupper/Vapp20G11/nominering.php">Nominering </a>
 						</li>
 
 						<?php
-						if(empty($_SESSION["brukernavn"])) {
+						if (empty($_SESSION["brukernavn"])) {
 							print ("<li class=\"li1\">
                   <a class=\"knapp1\" href=\"https://itfag.usn.no/grupper/Vapp20G11/logginn.php\">Logg inn </a>
                 </li>");

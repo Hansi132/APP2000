@@ -12,7 +12,7 @@ try {
 	}
 
 	$dhn = new mysqlPDO();
-	$sql = "SELECT type FROM brukertype JOIN bruker b on brukertype.idbrukertype = b.brukertype WHERE b.`e-post` =:epost;";
+	$sql = "SELECT type FROM brukertype JOIN bruker b on brukertype.idbrukertype = b.brukertype WHERE b.epost =:epost;";
 	$stmt = $dhn->prepare($sql);
 	$stmt->bindParam(':epost', $inloggetBruker);
 	$stmt->execute();
