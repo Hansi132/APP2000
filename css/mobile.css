@@ -39,6 +39,7 @@ body {
 .item2 {
   grid-area: menu;
   margin-top: 2vh;
+  margin-left: 2vh;
 }
 
 .item3 {

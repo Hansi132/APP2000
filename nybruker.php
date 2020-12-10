@@ -87,7 +87,7 @@
 				} else {
 					$sql = "INSERT INTO bruker (`epost`, passord, enavn, fnavn, brukertype, fdato, mann) VALUES(:epost, :passord, :enavn, :fnavn, 1, :fdato, :mann);";
 					$stmt = $dhn->prepare($sql);
-					$stmt->execute([':epost' => $epost, ':passord' => sha1("IT2_2021" . $_POST["passord"]), ':enavn' => $etternavn, ':fnavn' => $fornavn, ':fdato' => $bursdag, ':mann' => $kjonn]);
+					$stmt->execute([':epost' => strtolower($epost), ':passord' => sha1("IT2_2021" . $_POST["passord"]), ':enavn' => $etternavn, ':fnavn' => $fornavn, ':fdato' => $bursdag, ':mann' => $kjonn]);
 					$stmt = null;
 				}
 			}
