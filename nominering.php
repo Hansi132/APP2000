@@ -61,19 +61,28 @@ include ("isLogged.php");
                   <a class="knapp" href="nominering.php">Nominering </a>
                 </li>
 
-				  <?php
-				  	if(empty($_SESSION["brukernavn"])) {
-				  		print ("<li class=\"li1\">
-                  <a class=\"knapp\" href=\"logginn.php\">Logg inn </a>
+                <?php
+            if (empty(@$innloggetBruker)) {
+              print ("<li class=\"li1\">
+                  <a class=\"knapp\" href=\"https://itfag.usn.no/grupper/Vapp20G11/logginn.php\">Logg inn </a>
                 </li>");
-					} else {
-						print ("<li class=\"li1\">
-							<a class=\"knapp\" href=\"loggut.php\"> Logg ut
-								<div id=\"brukernavn\"></div>
-							</a>
-						</li>");
-					}
-				  ?>
+            } else {
+              print ("<li class=\"li1\">
+              <a class=\"knapp\" href=\"https://itfag.usn.no/grupper/Vapp20G11/loggut.php\"> Logg ut
+                <div id=\"brukernavn\"></div>
+              </a>
+            </li>");
+            }
+            ?>
+                <?php if (!empty(@$innloggetBruker)) {
+              $brukertype = $_SESSION["brukertype"];
+              $fnavn = $_SESSION["fnavn"];
+              print ("<li class='li1'> <a class='knapp' href='https://itfag.usn.no/grupper/Vapp20G11/users/$brukertype/default.php'>$fnavn</a></li>");
+            } ?>
+
+            
+
+				  
               </ul>
             </nav>
           </div>

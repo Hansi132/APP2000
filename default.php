@@ -23,11 +23,13 @@ session_start();
 	<!------------------------------------------------------------------------------------------------------------>
 	<div class="item3">
 		<section>
-			<h3>Velkommen til side for valg</h3>
+			<h3>Velkommen til siden for studentvalget 2021</h3>
 			<br>
-			<p class="text">Dette er en side der man kan stemme og nominere kandidater for valget.
-				Venligst logg inn for
-				å bruke siden.</p>
+			<p class="text"> <br>
+				 
+			Dette er siden der dere skal stemme og nominere kandidater for skolevalget. <br>
+			Vennligst logg inn for å bruke siden.
+		</p>
 			<img height="200px"
 				 src="https://www.usn.no/getfile.php/13520469-1525427372/usn.no/om_USN/Logo%20og%20grafiske%20elementer/USN_logotype.png">
 		</section>
@@ -69,25 +71,25 @@ session_start();
 							   href="https://itfag.usn.no/grupper/Vapp20G11/nominering.php">Nominering </a>
 						</li>
 
-						<?php if (!empty(@$innloggetBruker)) {
-							$brukertype = $_SESSION["brukertype"];
-							$fnavn = $_SESSION["fnavn"];
-							print ("<li class='li1'> <a class='knapp' href='https://itfag.usn.no/grupper/Vapp20G11/users/$brukertype/default.php'>$fnavn</a></li>");
-						} ?>
-
-						<?php
-						if (empty(@$innloggetBruker)) {
-							print ("<li class=\"li1\">
+						      <?php
+            if (empty(@$innloggetBruker)) {
+              print ("<li class=\"li1\">
                   <a class=\"knapp\" href=\"https://itfag.usn.no/grupper/Vapp20G11/logginn.php\">Logg inn </a>
                 </li>");
-						} else {
-							print ("<li class=\"li1\">
-							<a class=\"knapp\" href=\"https://itfag.usn.no/grupper/Vapp20G11/loggut.php\"> Logg ut
-								<div id=\"brukernavn\"></div>
-							</a>
-						</li>");
-						}
-						?>
+            } else {
+              print ("<li class=\"li1\">
+              <a class=\"knapp\" href=\"https://itfag.usn.no/grupper/Vapp20G11/loggut.php\"> Logg ut
+                <div id=\"brukernavn\"></div>
+              </a>
+            </li>");
+            }
+            ?>
+                <?php if (!empty(@$innloggetBruker)) {
+              $brukertype = $_SESSION["brukertype"];
+              $fnavn = $_SESSION["fnavn"];
+              print ("<li class='li1'> <a class='knapp' href='https://itfag.usn.no/grupper/Vapp20G11/users/$brukertype/default.php'>$fnavn</a></li>");
+            } ?>
+
 					</ul>
 				</nav>
 

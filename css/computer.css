@@ -29,6 +29,10 @@
         border: 1px solid var(--header) !important;
     }
 
+    .text {
+        text-align: right;
+    }
+
     
 
 } 
